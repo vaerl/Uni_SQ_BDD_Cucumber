@@ -9,6 +9,7 @@ Feature: Serialise a Mitarbeiter
     And its name should be "<vorname>"
     And its surname should be "<nachname>"
     And its fachgebiete should be "<fachgebiete>"
+    Then the tester sould remove all previous files
     Then the verwaltung should serialize the mitarbeiter
 
     Examples:

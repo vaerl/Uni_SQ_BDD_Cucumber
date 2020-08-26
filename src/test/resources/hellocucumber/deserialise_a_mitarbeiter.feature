@@ -29,6 +29,7 @@ Feature: Deserialise a Mitarbeiter
     And its name should be "<vorname>"
     And its surname should be "<nachname>"
     And its fachgebiete should be "<fachgebiete>"
+    Then the tester sould remove all previous files
     Then the verwaltung should deserialize the Mitarbeiter
     And the verwaltung should throw an error
 
@@ -82,7 +83,7 @@ Feature: Deserialise a Mitarbeiter
     And a valid amount of fachgebiete "<fachgebiete>"
     Then the verwaltung should create a new Mitarbeiter
     And its name should be "<vorname>"
-    And its surname should be "<fachgebiete>"
+    And its surname should be "<nachname>"
     And its fachgebiete should be "<fachgebiete>"
     Then the tester should invalidate the surname
     Then the verwaltung should serialize the mitarbeiter

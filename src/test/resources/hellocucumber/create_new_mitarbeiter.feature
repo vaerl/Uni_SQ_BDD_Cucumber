@@ -5,7 +5,8 @@ Feature: Create new Mitarbeiter
     Given a name "<vorname>"
     And an invalid surname "<nachname>"
     And a valid amount of fachgebiete "<fachgebiete>"
-    Then the verwaltung should throw an error
+    Then the verwaltung should create a new Mitarbeiter
+    And the verwaltung should throw an error
 
     Examples:
       | vorname | nachname | fachgebiete |
@@ -13,11 +14,12 @@ Feature: Create new Mitarbeiter
       | Enrico | F | JAVA |
       | Isaac | N | DESIGN, CSHARP |
 
-  Scenario Outline: Mitarbeiter has more than four Fachgebiete
+  Scenario Outline: Mitarbeiter has more than three Fachgebiete
     Given a name "<vorname>"
     And a valid surname "<nachname>"
     And more than three fachgebiete "<fachgebiete>"
-    Then the verwaltung should throw an error
+    Then the verwaltung should create a new Mitarbeiter
+    And the verwaltung should throw an error
 
     Examples:
       | vorname | nachname | fachgebiete |
@@ -29,7 +31,8 @@ Feature: Create new Mitarbeiter
     Given a name "<vorname>"
     And a valid surname "<nachname>"
     And zero fachgebiete
-    Then the verwaltung should throw an error
+    Then the verwaltung should create a new Mitarbeiter
+    And the verwaltung should throw an error
 
     Examples:
       | vorname | nachname |
