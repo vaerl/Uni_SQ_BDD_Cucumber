@@ -24,11 +24,6 @@ public class Verwaltung {
         return createMitarbeiter(temp.vorname, temp.nachname, temp.fachgebiete);
     }
 
-    public static Mitarbeiter createMitarbeiter(String vorname, String nachname){
-        // delegate call to Mitarbeiter
-        return new Mitarbeiter(vorname, nachname);
-    }
-
     public static Mitarbeiter createMitarbeiter(String vorname, String nachname, Set<Fachgebiet> fachgebiete){
         // delegate call to Mitarbeiter
         return new Mitarbeiter(vorname, nachname, fachgebiete);
